@@ -10,17 +10,17 @@ export class recipesFactory {
     recipeHTML() {
         const row = document.getElementById("main-js");
         let col = document.createElement("div");
-        col.setAttribute("class", "col-12 col-md-6 col-lg-4");
+        col.setAttribute("class", "col-12 col-md-6 col-lg-4 card-container");
         row.appendChild(col);
         let recipeIngredients = "";      
         
         for (let i=0; i<this.ingredients.length; i++) {
             if (this.ingredients[i].quantity == null) {
-                recipeIngredients += '<li>'+'<p class=ingredient>'+this.ingredients[i].ingredient+'</p>'+'</li>'
+                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+'</p>'+'</li>'
             } else if (this.ingredients[i].unit == null) {
-                recipeIngredients += '<li>'+'<p class=ingredient>'+this.ingredients[i].ingredient+': '+'</p>'+ this.ingredients[i].quantity+'</li>'
+                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+': '+'</p>'+ this.ingredients[i].quantity+'</li>'
             } else if (this.ingredients[i].unit != null) {
-                recipeIngredients += '<li>'+'<p class=ingredient>'+this.ingredients[i].ingredient+': '+'</p>'+ this.ingredients[i].quantity+' '+this.ingredients[i].unit+'</li>'
+                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+': '+'</p>'+ this.ingredients[i].quantity+' '+this.ingredients[i].unit+'</li>'
             }
         }
         col.innerHTML =

@@ -26,7 +26,7 @@
         <div class="container-fluid search-bar">
             <div class="row">
                 <div class="input-group">
-                    <input type="search" id="form1" class="form-control form-control-lg"
+                    <input type="search" id="form1" class="form-control form-control-lg" maxlength="40"
                     placeholder="Recherchez un ingrédient, appareil, ustensile, ou une recette">
 
                 <button type="button" class="btn btn-info">
@@ -40,76 +40,26 @@
             <div class="row">
                 <button type="button" class="btn btn-primary btn-lg btn-filter" id="btn-ingredients">Ingrédients<i class="fas fa-chevron-down"></i></button>
                 <div id="ingredients" class="dropdown">
-                <input type ="text" placeholder="Recherche un ingrédient" id="ingredients-input"><i class="fas fa-chevron-up" id="close-ingredients"></i>
+                <input type ="text" placeholder="Recherche un ingrédient" autocomplete="off" maxlength="12" id="ingredients-input"><i class="fas fa-chevron-up" id="close-ingredients"></i>
                 </br>
                 <ul class="options" id="options-ingredients">
-                <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                <li class="azza"><a href="#sucre">Sucre</a></li>
-                <li class="azza"><a href="#concombre">Concombre</a></li>
-                <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                <li class="azza"><a href="#sucre">Sucre</a></li>
-                <li class="azza"><a href="#concombre">Concombre</a></li>
-                <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                <li class="azza"><a href="#sucre">Sucre</a></li>
-                <li class="azza"><a href="#concombre">Concombre</a></li>
-                <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                <li class="azza"><a href="#sucre">Sucre</a></li>
-                <li class="azza"><a href="#concombre">Concombre</a></li>
-                <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-
-                
-                
+               
                 </ul>
                 </div>
                 <button type="button" class="btn btn-success btn-lg btn-filter"id="btn-appareils">Appareil<i class="fas fa-chevron-down"></i></button>
                 <div id="appareils" class="dropdown">
-                    <input type ="text" placeholder="Recherche un appareil" id="appareils-input"><i class="fas fa-chevron-up" id="close-appareils"></i>
+                    <input type ="text" placeholder="Recherche un appareil" autocomplete="off" maxlength="12" id="appareils-input"><i class="fas fa-chevron-up" id="close-appareils"></i>
                     </br>
                     <ul class="options" id="options-appliance">
-                        <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                        <li class="azza"><a href="#sucre">Sucre</a></li>
-                        <li class="azza"><a href="#concombre">Concombre</a></li>
-                        <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                        <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                        <li class="azza"><a href="#sucre">Sucre</a></li>
-                        <li class="azza"><a href="#concombre">Concombre</a></li>
-                        <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                        <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                        <li class="azza"><a href="#sucre">Sucre</a></li>
-                        <li class="azza"><a href="#concombre">Concombre</a></li>
-                        <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                        <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                        <li class="azza"><a href="#sucre">Sucre</a></li>
-                        <li class="azza"><a href="#concombre">Concombre</a></li>
-                        <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                    
+ 
                     </ul>
                     </div>
                 <button type="button" class="btn btn-danger btn-lg btn-filter" id="btn-ustensiles">Ustensiles<i class="fas fa-chevron-down"></i></button>
                 <div id="ustensiles" class="dropdown">
-                    <input type ="text" placeholder="Recherche un ustensile" id="ustensiles-input"><i class="fas fa-chevron-up" id="close-ustensiles"></i>
+                    <input type ="text" placeholder="Recherche un ustensile" autocomplete="off" maxlength="12" id="ustensils-input"><i class="fas fa-chevron-up" id="close-ustensiles"></i>
                     </br>
                     <ul class="options" id="options-ustensils">
-                        <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                        <li class="azza"><a href="#sucre">Sucre</a></li>
-                        <li class="azza"><a href="#concombre">Concombre</a></li>
-                        <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                        <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                        <li class="azza"><a href="#sucre">Sucre</a></li>
-                        <li class="azza"><a href="#concombre">Concombre</a></li>
-                        <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                        <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                        <li class="azza"><a href="#sucre">Sucre</a></li>
-                        <li class="azza"><a href="#concombre">Concombre</a></li>
-                        <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                        <li class="azza"><a href="#laitdecoco">Lait de coco</a></li>
-                        <li class="azza"><a href="#sucre">Sucre</a></li>
-                        <li class="azza"><a href="#concombre">Concombre</a></li>
-                        <li class="azza"><a href="#citronvert">Citron Vert</a></li>
-                    
+
                     </ul>
                     </div>
             </div>
@@ -120,6 +70,7 @@
                 
             </div>              
         </main>
+
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
         crossorigin="anonymous"></script>

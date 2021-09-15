@@ -1,5 +1,6 @@
 import {recipes} from "./recipes.mjs";
 import {recipesFactory} from "./recipesFactory.mjs";
+import {searchIngredient, searchAppliance, searchUstensil} from "./searchFilter.mjs";
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -72,28 +73,16 @@ const closeUstensiles = document.getElementById("close-ustensiles");
 btnAppareils.addEventListener("click", function() {
     btnAppareils.style.display = "none";
     appareilsDropdown.style.display = "block";
-    ingredientsDropdown.style.display = "none";
-    btnIngredients.style.display = "block";
-    ustensilesDropdown.style.display = "none";
-    btnUstensiles.style.display = "block";
 })
 
 btnIngredients.addEventListener("click", function() {
     btnIngredients.style.display = "none";
     ingredientsDropdown.style.display = "block";
-    ustensilesDropdown.style.display = "none";
-    btnUstensiles.style.display = "block";
-    appareilsDropdown.style.display = "none";
-    btnAppareils.style.display = "block";
 })
 
 btnUstensiles.addEventListener("click", function() {
     btnUstensiles.style.display = "none";
     ustensilesDropdown.style.display = "block";
-    ingredientsDropdown.style.display = "none";
-    btnIngredients.style.display = "block";
-    appareilsDropdown.style.display = "none";
-    btnAppareils.style.display = "block";
 })
 
 closeAppareils.addEventListener("click", function() {
@@ -110,3 +99,34 @@ closeUstensiles.addEventListener("click", function() {
     btnUstensiles.style.display = "block";
     ustensilesDropdown.style.display = "none";
 })
+
+document.addEventListener("mouseup", function(e) {
+    if (!ingredientsDropdown.contains(e.target)) {
+        ingredientsDropdown.style.display = "none";
+        btnIngredients.style.display ="block";
+    }
+});
+
+document.addEventListener("mouseup", function(e) {
+    if (!appareilsDropdown.contains(e.target)) {
+        appareilsDropdown.style.display = "none";
+        btnAppareils.style.display ="block";
+    }
+});
+
+document.addEventListener("mouseup", function(e) {
+    if (!ustensilesDropdown.contains(e.target)) {
+        ustensilesDropdown.style.display = "none";
+        btnUstensiles.style.display ="block";
+    }
+});
+
+
+let ingredientsInput = document.getElementById("ingredients-input");
+let appliancesInput = document.getElementById("appareils-input");
+let ustensilsInput = document.getElementById("ustensils-input");
+
+
+ingredientsInput.addEventListener("input", searchIngredient);
+appliancesInput.addEventListener("input", searchAppliance);
+ustensilsInput.addEventListener("input", searchUstensil);
