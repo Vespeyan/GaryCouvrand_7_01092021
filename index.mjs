@@ -35,7 +35,7 @@ let ingredientsListUnique = [];
 
         let ingredientsListHTML = "";
         ingredientsListUnique.forEach(function(item) {
-            ingredientsListHTML += '<li class="azza"><a>'+item+'</a></li>';
+            ingredientsListHTML += '<li class="ingredient"><a>'+item+'</a></li>';
         })
         document.getElementById("options-ingredients").innerHTML = ingredientsListHTML;
 
@@ -45,7 +45,7 @@ let ingredientsListUnique = [];
 
         let applianceListHTML = "";
         applianceListUnique.forEach(function(item) {
-            applianceListHTML += '<li class="azza"><a>'+item+'</a></li>';
+            applianceListHTML += '<li class="appliance"><a>'+item+'</a></li>';
         })
         document.getElementById("options-appliance").innerHTML = applianceListHTML;
 
@@ -55,7 +55,7 @@ let ingredientsListUnique = [];
 
         let ustensilsListHTML = "";
         ustensilsListUnique.forEach(function(item) {
-            ustensilsListHTML += '<li class="azza"><a>'+item+'</a></li>';
+            ustensilsListHTML += '<li class="ustensil"><a>'+item+'</a></li>';
         })
         document.getElementById("options-ustensils").innerHTML = ustensilsListHTML;
     
@@ -110,4 +110,3 @@ closeUstensiles.addEventListener("click", function() {
     btnUstensiles.style.display = "block";
     ustensilesDropdown.style.display = "none";
 })
-
