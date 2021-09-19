@@ -37,7 +37,11 @@
         </div>
 
         <div class="container-fluid filters">
+            <div class="row" id="tags-section">
+
+            </div>
             <div class="row">
+
                 <button type="button" class="btn btn-primary btn-lg btn-filter" id="btn-ingredients">Ingrédients<i class="fas fa-chevron-down"></i></button>
                 <div id="ingredients" class="dropdown">
                 <input type ="text" placeholder="Recherche un ingrédient" autocomplete="off" maxlength="12" id="ingredients-input"><i class="fas fa-chevron-up" id="close-ingredients"></i>
@@ -67,10 +71,10 @@
 
         <main class="container-fluid cards">
             <div class="row" id = "main-js">
-                
+                <p id="error-message">Aucune recette ne correspond à votre critère... vous pouvez chercher « tarte aux pommes », « poisson », etc.</p>
             </div>              
         </main>
-
+        
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
         crossorigin="anonymous"></script>

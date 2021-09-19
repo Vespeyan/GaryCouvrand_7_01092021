@@ -36,6 +36,8 @@ export class recipesFactory {
                             recipeIngredients+
             '            </ul>'+
             '            <p class="recipe">'+this.description+'</p>'+
+            '            <p class="card-ustensils">'+this.ustensils+'</p>'+
+            '            <p class="card-appliance">'+this.appliance+'</p>'+     
             '        </div>'+                 
             '    </div>'+
             '</div>';

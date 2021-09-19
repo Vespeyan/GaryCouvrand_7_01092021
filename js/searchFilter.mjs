@@ -1,3 +1,4 @@
+// Ces fonctions permettent d'afficher/masquer les filtres selon l'input entré dans le champ correspondant
 function searchIngredient() {
     let ingredientsInput = document.getElementById("ingredients-input");
     let ingredientsInputValue = ingredientsInput.value.toLowerCase();
@@ -36,5 +37,7 @@ function searchUstensil() {
         }
     }
 }
+
+
 
 export {searchIngredient, searchAppliance, searchUstensil};
