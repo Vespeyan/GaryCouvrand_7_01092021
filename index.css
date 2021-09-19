@@ -106,6 +106,10 @@ input:focus {
     height: max-content;
     
 }
+#filters-menu {
+    position: absolute;
+    z-index: 2;
+}
 .options {
     display: flex;
     flex-wrap: wrap;
@@ -188,6 +192,9 @@ ul {
     font-size: larger;
     font-weight: bold;
     display: none;
+}
+.cards {
+    padding-top: 120px;
 }
 .card {
     margin-top: 20px;
