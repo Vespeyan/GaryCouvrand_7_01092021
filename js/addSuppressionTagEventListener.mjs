@@ -29,17 +29,18 @@ function addSuppressionTagEventListener() {
                     cards[x].style.display = "block";
                 }
             }
-            validTags.length = 0;
             let filters = document.querySelectorAll(".ingredient, .appliance, .ustensil");
             // On fait le tri dans la liste des filtres en fonction des recettes apparaissant de nouveau sur le site
             for (let c=0; c<filters.length; c++) {
                 let cardSection = document.getElementById("main-js");
-                if(!cardSection.innerText.toLowerCase().includes(filters[c].textContent.toLowerCase())) {
+                if(!cardSection.innerText.toLowerCase().includes(filters[c].textContent.toLowerCase()) ||
+                    validTags.every(item => filters[c].textContent.toLowerCase().includes(item))) {
                     filters[c].style.display = "none";
                 } else {
                     filters[c].style.display = "block";
                 }
             }
+            validTags.length = 0;
         }
     }
 }

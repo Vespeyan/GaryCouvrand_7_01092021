@@ -208,10 +208,14 @@ ul {
     font-weight: bold;
 }
 .card-ustensils {
-    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 .card-appliance {
-    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 .title-time {
     margin-bottom: 10px;
