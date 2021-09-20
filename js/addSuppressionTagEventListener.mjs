@@ -1,4 +1,5 @@
 import {searchBarMain} from "./searchBarMain.mjs";
+import {searchBarForIngredients} from "./searchBarForIngredients.mjs";
 
 function addSuppressionTagEventListener() {
     let suppressionTag = document.querySelectorAll(".suppression-tag");
@@ -8,6 +9,7 @@ function addSuppressionTagEventListener() {
     for (let i=0; i<suppressionTag.length; i++) {
         suppressionTag[i].addEventListener("click", closeTag);
         suppressionTag[i].addEventListener("click", searchBarMain);
+        suppressionTag[i].addEventListener("click", searchBarForIngredients);
         // Cette fonction sert à fermer le tag et ré-afficher les éléments auparavant masqués grâce à lui
         function closeTag() {
             tags[i].style.display = "none";

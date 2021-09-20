@@ -13,6 +13,7 @@ function searchBarMain() {
     card.forEach(function(element) {
         // Si l'input correspond à la regex et n'est pas contenu dans la recette, la recette disparait
         if(regex.test(searchBarInputValue) && !element.innerText.toLowerCase().includes(searchBarInputValue)) {
+            document.getElementById("error-message").style.display = "none";
             element.style.display = "none";
         /* Si l'input correspond à la regex et se trouve dans la recette ET si tous les tags valides affichés sont bien
             présents dans la recette également, alors la recette réapparait et le message d'erreur disparait s'il a été affiché
@@ -27,12 +28,16 @@ function searchBarMain() {
             document.getElementById("error-message").style.display = "none";
             element.style.display = "block";
         }
-    })
+    
 
     // Si le contenu du container des recettes est vide, alors un message d'erreur apparait
     if(document.getElementById("main-js").innerText == "") {
         document.getElementById("error-message").style.display = "block";
+    } else {
+        document.getElementById("error-message").style.display = "none";
     }
+    validTags.length = 0;
+})
 
     
 }

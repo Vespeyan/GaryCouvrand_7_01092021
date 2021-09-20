@@ -1,4 +1,4 @@
-// Cette fonction permet de masquer les recettes qui ne corrspondent pas aux tags valides et les filtres qui n'apparaissent alors plus dans les recettes restantes
+// Cette fonction permet de masquer les recettes qui ne correspondent pas aux tags valides et les filtres qui n'apparaissent alors plus dans les recettes restantes
 function reduceCards() {
     let tags = document.querySelectorAll(".tag");
     let cards = document.querySelectorAll(".card-container");
