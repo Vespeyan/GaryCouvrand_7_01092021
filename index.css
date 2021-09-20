@@ -104,6 +104,7 @@ input:focus {
     font-size: 1rem;
     max-width: 650px;
     height: max-content;
+    font-family: 'Roboto', sans-serif;
     
 }
 #filters-menu {
