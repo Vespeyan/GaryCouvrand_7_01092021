@@ -12,16 +12,20 @@ export class recipesFactory {
         let col = document.createElement("div");
         col.setAttribute("class", "col-12 col-md-6 col-lg-4 card-container");
         row.appendChild(col);
-        let recipeIngredients = "";      
+        let recipeIngredients = "";
+        let recipeUstensils = "";      
         
         for (let i=0; i<this.ingredients.length; i++) {
             if (this.ingredients[i].quantity == null) {
                 recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+'</p>'+'</li>'
             } else if (this.ingredients[i].unit == null) {
-                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+': '+'</p>'+ this.ingredients[i].quantity+'</li>'
+                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+'</p>'+ ': '+this.ingredients[i].quantity+'</li>'
             } else if (this.ingredients[i].unit != null) {
-                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+': '+'</p>'+ this.ingredients[i].quantity+' '+this.ingredients[i].unit+'</li>'
+                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+'</p>'+ ': '+this.ingredients[i].quantity+' '+this.ingredients[i].unit+'</li>'
             }
+        }
+        for(let j=0; j<this.ustensils.length; j++) {
+            recipeUstensils += '<li>'+'<p class=card-ustensils>'+this.ustensils[j]+'</p>'+'</li>';
         }
         col.innerHTML =
             '<div class="card">'+
@@ -36,7 +40,9 @@ export class recipesFactory {
                             recipeIngredients+
             '            </ul>'+
             '            <p class="recipe">'+this.description+'</p>'+
-            '            <p class="card-ustensils">'+this.ustensils+'</p>'+
+            '            <ul class="ustensils-list">'+
+                            recipeUstensils+
+            '            </ul>'+
             '            <p class="card-appliance">'+this.appliance+'</p>'+     
             '        </div>'+                 
             '    </div>'+

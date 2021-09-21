@@ -3,20 +3,25 @@ import {searchBarForIngredients} from "./searchBarForIngredients.mjs";
 
 function addSuppressionTagEventListener() {
     let suppressionTag = document.querySelectorAll(".suppression-tag");
-    let tags = document.querySelectorAll(".tag");
-    let cards = document.querySelectorAll(".card-container");
+
     // Pour chaque tag, on va ajouter une fonction qui permet de le fermer au clic tout en faisant un appel de celle gérant la recherche de la barre principale
     for (let i=0; i<suppressionTag.length; i++) {
         suppressionTag[i].addEventListener("click", closeTag);
+        suppressionTag[i].myParam = i;
         suppressionTag[i].addEventListener("click", searchBarMain);
         suppressionTag[i].addEventListener("click", searchBarForIngredients);
+    }
+}
         // Cette fonction sert à fermer le tag et ré-afficher les éléments auparavant masqués grâce à lui
-        function closeTag() {
-            tags[i].style.display = "none";
-            tags[i].value = "";
+        function closeTag(evt) {
+            let tags = document.querySelectorAll(".tag");
+            let cards = document.querySelectorAll(".card-container");
+
+            tags[evt.target.myParam].style.display = "none";
+            tags[evt.target.myParam].value = "";
             let filtersIngredient = document.querySelectorAll(".ingredient, .appliance, .ustensil");
             for(let j=0; j<filtersIngredient.length; j++) {
-                if(tags[i].textContent.toLowerCase().includes(filtersIngredient[j].textContent.toLowerCase())) {
+                if(tags[evt.target.myParam].textContent.toLowerCase().includes(filtersIngredient[j].textContent.toLowerCase())) {
                     filtersIngredient[j].style.display = "block";
                 }
             }
@@ -44,7 +49,7 @@ function addSuppressionTagEventListener() {
             }
             validTags.length = 0;
         }
-    }
-}
+    
+
 
 export {addSuppressionTagEventListener};
