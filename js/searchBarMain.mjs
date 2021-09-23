@@ -3,7 +3,7 @@ function searchBarMain() {
     // Regex permettant de vérifier que l'input est en toutes lettres, avec minimum trois lettres et en prenant en compte les espaces
     let regex = /^[A-Za-z ]{3,}$/;
     let searchBarInput = document.getElementById("form1");
-    let searchBarInputValue = searchBarInput.value.toLowerCase();
+    let searchBarInputValue = searchBarInput.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     let cardInfos = document.querySelectorAll(".card-container");
     let tags = document.querySelectorAll(".tag");
     let validTags = [];
@@ -13,12 +13,12 @@ function searchBarMain() {
     }
     cardInfos.forEach(function(element) {
         // Si l'input correspond à la regex et n'est pas contenu dans la recette, la recette disparait
-        if(regex.test(searchBarInputValue) && !element.innerText.toLowerCase().includes(searchBarInputValue)) {
+        if(regex.test(searchBarInputValue) && !element.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(searchBarInputValue)) {
             element.style.display = "none";
         /* Si l'input correspond à la regex et se trouve dans la recette ET si tous les tags valides affichés sont bien
             présents dans la recette également, alors la recette réapparait et le message d'erreur disparait s'il a été affiché
         */
-        } else if(regex.test(searchBarInputValue) && element.textContent.toLowerCase().includes(searchBarInputValue) && validTags.every(item => element.textContent.toLowerCase().includes(item))) {
+        } else if(regex.test(searchBarInputValue) && element.textContent.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(searchBarInputValue) && validTags.every(item => element.textContent.toLowerCase().includes(item))) {
             document.getElementById("error-message").style.display = "none";
             element.style.display = "block";
         /* Si la barre d'input est vide et que tous les tags valides affichés sont bien présents dans la recette

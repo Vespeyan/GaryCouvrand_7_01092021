@@ -48,7 +48,7 @@ export const recipes = [
                 "quantity" : 1
             },
             {
-                "ingredient" : "Tomate",
+                "ingredient" : "Tomates",
                 "quantity" : 2
             },
             {
@@ -119,7 +119,7 @@ export const recipes = [
                 "quantity": 200,
                 "unit": "grammes"
             },{
-                "ingredient": "Tomate",
+                "ingredient": "Tomates",
                 "quantity": 2
             },
             {
@@ -157,7 +157,7 @@ export const recipes = [
                "unit": "grammes"
            },
            {
-                "ingredient": "Tomate",
+                "ingredient": "Tomates",
                 "quantity": 2
            },
            {
@@ -191,7 +191,7 @@ export const recipes = [
                 "quantity": 1
             },
             {
-                "ingredient": "Pomme",
+                "ingredient": "Pommes",
                 "quantity": 3
             },
             {
@@ -533,7 +533,7 @@ export const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Banane",
+                "ingredient": "Bananes",
                 "quantity": 4
             }
         ],
@@ -548,7 +548,7 @@ export const recipes = [
         "servings": 2,
         "ingredients": [
             {
-                "ingredient": "Tomate",
+                "ingredient": "Tomates",
                 "quantity": 500,
                 "unit": "grammes"
             },
@@ -659,7 +659,7 @@ export const recipes = [
                 "unit":"grammes"
             },
             {
-                "ingredient": "Banane",
+                "ingredient": "Bananes",
                 "quantity": 1
             }
         ],
@@ -835,7 +835,7 @@ export const recipes = [
                 "unit": "grammes"
             },
             {
-                "ingredient": "Tomate",
+                "ingredient": "Tomates",
                 "quantity": 1
             },
             {
@@ -899,7 +899,7 @@ export const recipes = [
         "servings": 2,
         "ingredients": [
             {
-                "ingredient": "Tomate",
+                "ingredient": "Tomates",
                 "quantity": 6
             },
             {
@@ -1289,7 +1289,7 @@ export const recipes = [
                 "quantity": 1
             },
             {
-                "ingredient": "Coulis de tomates",
+                "ingredient": "Coulis de tomate",
                 "quantity": 20,
                 "unit": "cl"
             },
@@ -1341,7 +1341,7 @@ export const recipes = [
         "servings": 40,
         "ingredients": [
             {
-                "ingredient": "Pomme",
+                "ingredient": "Pommes",
                 "quantity": 2
             },
             {
@@ -1664,7 +1664,7 @@ export const recipes = [
                 "quantity": 2
             },
             {
-                "ingredient": "Kiwis",
+                "ingredient": "Kiwi",
                 "quantity": 3
             },
             {

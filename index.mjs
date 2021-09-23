@@ -30,11 +30,11 @@ for (let i=0; i<recipes.length; i++) {
         catégories, tout en appliquant à ces mêmes éléments la fonction servant à leur mettre une majuscule
     */
     for (let j=0; j<recipes[i].ingredients.length; j++) {
-        ingredientsList.push(capitalizeFirstLetter(recipes[i].ingredients[j].ingredient));
+        ingredientsList.push(capitalizeFirstLetter(recipes[i].ingredients[j].ingredient.toLowerCase()));
     }
-    applianceList.push(capitalizeFirstLetter(recipes[i].appliance));
+    applianceList.push(capitalizeFirstLetter(recipes[i].appliance.toLowerCase()));
     recipes[i].ustensils.forEach((function(item) {
-        ustensilsList.push(capitalizeFirstLetter(item));
+        ustensilsList.push(capitalizeFirstLetter(item.toLowerCase()));
     }))
     
 }
