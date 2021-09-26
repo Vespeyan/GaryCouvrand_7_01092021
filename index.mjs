@@ -151,58 +151,58 @@ const filtersAppliance = document.querySelectorAll(".appliance");
 const filtersUstensil = document.querySelectorAll(".ustensil");
 
 // Cette boucle ajoute plusieurs écouteurs d'événements à chaque ingrédient de la liste de filtres
-for (let i=0; i<filtersIngredient.length; i++) {
-    filtersIngredient[i].addEventListener("click", addTagIngredient);
-    filtersIngredient[i].addEventListener("click", reduceCards);
-    filtersIngredient[i].addEventListener("click", addSuppressionTagEventListener);
+filtersIngredient.forEach(function(element) {
+    element.addEventListener("click", addTagIngredient);
+    element.addEventListener("click", reduceCards);
+    element.addEventListener("click", addSuppressionTagEventListener);
     // Cette fonction permet de créer un tag qui contient le nom de l'ingrédient choisi et de le faire disparaitre de la liste de filtres
     function addTagIngredient() {
         let tag = document.createElement("button");
         tag.setAttribute("type", "button");
         tag.setAttribute("class", "tag btn-primary btn-sm");
-        tag.value = filtersIngredient[i].textContent;
-        tag.innerHTML = '<p>'+filtersIngredient[i].textContent+ 
+        tag.value = element.textContent;
+        tag.innerHTML = '<p>'+element.textContent+ 
                         '<img src="images/croix.png" alt="suppression tag" class="suppression-tag"></p>';
         document.getElementById("tags-section").appendChild(tag);
-        filtersIngredient[i].style.display = "none";
+        element.style.display = "none";
     }    
-}
+})
 
 // Même chose pour les appareils
-for (let i=0; i<filtersAppliance.length; i++) {
-    filtersAppliance[i].addEventListener("click", addTagAppliance);
-    filtersAppliance[i].addEventListener("click", reduceCards);
-    filtersAppliance[i].addEventListener("click", addSuppressionTagEventListener);
+filtersAppliance.forEach(function(element) {
+    element.addEventListener("click", addTagAppliance);
+    element.addEventListener("click", reduceCards);
+    element.addEventListener("click", addSuppressionTagEventListener);
 
     function addTagAppliance() {
         let tag = document.createElement("button");
         tag.setAttribute("type", "button");
         tag.setAttribute("class", "tag btn-success btn-sm");
-        tag.value = filtersAppliance[i].textContent;
-        tag.innerHTML = '<p>'+filtersAppliance[i].textContent+ 
+        tag.value = element.textContent;
+        tag.innerHTML = '<p>'+element.textContent+ 
                         '<img src="images/croix.png" alt="suppression tag" class="suppression-tag"></p>';
         document.getElementById("tags-section").appendChild(tag);
-        filtersAppliance[i].style.display = "none";
+        element.style.display = "none";
     }    
-}
+})
 
 // Même chose pour les ustensiles
-for (let i=0; i<filtersUstensil.length; i++) {
-    filtersUstensil[i].addEventListener("click", addTagUstensil);
-    filtersUstensil[i].addEventListener("click", reduceCards);
-    filtersUstensil[i].addEventListener("click", addSuppressionTagEventListener);
+filtersUstensil.forEach(function(element) {
+    element.addEventListener("click", addTagUstensil);
+    element.addEventListener("click", reduceCards);
+    element.addEventListener("click", addSuppressionTagEventListener);
 
     function addTagUstensil() {
         let tag = document.createElement("button");
         tag.setAttribute("type", "button");
         tag.setAttribute("class", "tag btn-danger btn-sm");
-        tag.value = filtersUstensil[i].textContent;
-        tag.innerHTML = '<p>'+filtersUstensil[i].textContent+ 
+        tag.value = element.textContent;
+        tag.innerHTML = '<p>'+element.textContent+ 
                         '<img src="images/croix.png" alt="suppression tag" class="suppression-tag"></p>';
         document.getElementById("tags-section").appendChild(tag);
-        filtersUstensil[i].style.display = "none";
+        element.style.display = "none";
     }    
-}
+})
 
 // Ici on définit une variable pour la barre de recherche principal à laquelle on va joindre deux fonctions différentes
 let searchBarInput = document.getElementById("form1");

@@ -15,18 +15,18 @@ export class recipesFactory {
         let recipeIngredients = "";
         let recipeUstensils = "";      
         
-        for (let i=0; i<this.ingredients.length; i++) {
-            if (this.ingredients[i].quantity == null) {
-                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+'</p>'+'</li>'
-            } else if (this.ingredients[i].unit == null) {
-                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+'</p>'+ ': '+this.ingredients[i].quantity+'</li>'
-            } else if (this.ingredients[i].unit != null) {
-                recipeIngredients += '<li>'+'<p class=card-ingredient>'+this.ingredients[i].ingredient+'</p>'+ ': '+this.ingredients[i].quantity+' '+this.ingredients[i].unit+'</li>'
+        this.ingredients.forEach(function(element) {
+            if (element.quantity == null) {
+                recipeIngredients += '<li>'+'<p class=card-ingredient>'+element.ingredient+'</p>'+'</li>'
+            } else if (element.unit == null) {
+                recipeIngredients += '<li>'+'<p class=card-ingredient>'+element.ingredient+'</p>'+ ': '+element.quantity+'</li>'
+            } else if (element.unit != null) {
+                recipeIngredients += '<li>'+'<p class=card-ingredient>'+element.ingredient+'</p>'+ ': '+element.quantity+' '+element.unit+'</li>'
             }
-        }
-        for(let j=0; j<this.ustensils.length; j++) {
-            recipeUstensils += '<li>'+'<p class=card-ustensils>'+this.ustensils[j]+'</p>'+'</li>';
-        }
+        })
+        this.ustensils.forEach(function(element) {
+            recipeUstensils += '<li>'+'<p class=card-ustensils>'+element+'</p>'+'</li>';
+        })
         col.innerHTML =
             '<div class="card">'+
             '    <img class="card-img-top" src="images/img.png" alt=""/>'+

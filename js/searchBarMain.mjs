@@ -8,9 +8,10 @@ function searchBarMain() {
     let tags = document.querySelectorAll(".tag");
     let validTags = [];
 
-    for (let n=0; n<tags.length; n++) {
-        validTags.push(tags[n].value.toLowerCase());
-    }
+    tags.forEach(function(element) {
+        validTags.push(element.value.toLowerCase());
+    })
+    
     cardInfos.forEach(function(element) {
         // Si l'input correspond à la regex et n'est pas contenu dans la recette, la recette disparait
         if(regex.test(searchBarInputValue) && !element.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(searchBarInputValue)) {
