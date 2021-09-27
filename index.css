@@ -254,3 +254,15 @@ ul {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+@media all and (max-width: 620px) {
+    #main-js {
+        margin-top: 100px;
+    }
+}
+
+@media all and (max-width: 395px) {
+    #main-js {
+        margin-top: 180px;
+    }
+}

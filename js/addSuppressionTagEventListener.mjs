@@ -5,12 +5,12 @@ function addSuppressionTagEventListener() {
     let suppressionTag = document.querySelectorAll(".suppression-tag");
 
     // Pour chaque tag, on va ajouter une fonction qui permet de le fermer au clic tout en faisant un appel de celle gérant la recherche de la barre principale
-    suppressionTag.forEach(function(element) {
-        element.addEventListener("click", closeTag);
-        element.myParam = i;
-        element.addEventListener("click", searchBarMain);
-        element.addEventListener("click", searchBarForIngredients);
-    })
+    for (let i=0; i<suppressionTag.length; i++) {
+        suppressionTag[i].addEventListener("click", closeTag);
+        suppressionTag[i].myParam = i;
+        suppressionTag[i].addEventListener("click", searchBarMain);
+        suppressionTag[i].addEventListener("click", searchBarForIngredients);
+    }
 }
         // Cette fonction sert à fermer le tag et ré-afficher les éléments auparavant masqués grâce à lui
         function closeTag(evt) {

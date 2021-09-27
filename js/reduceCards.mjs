@@ -25,7 +25,7 @@ function reduceCards() {
     let filters = document.querySelectorAll(".ingredient, .appliance, .ustensil");
     filters.forEach(function(element) {
         let cardSection = document.getElementById("main-js");
-        if(!cardSection.innerText.toLowerCase().includes(filters[i].textContent.toLowerCase())) {
+        if(!cardSection.innerText.toLowerCase().includes(element.textContent.toLowerCase())) {
             element.style.display = "none";
         }
     })
